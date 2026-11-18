@@ -8,7 +8,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f5f4;
+    background-color: #f4f6f9;
     color: #222222;
 }
 
@@ -16,7 +16,7 @@ body {
 /* Capçalera */
 
 header {
-    background-color: #172b24;
+    background-color: #0f2537;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -49,12 +49,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #3b704f;
+    background-color: #2563eb;
     color: white;
 }
 
 nav ul li a.actiu {
-    background-color: #3b704f;
+    background-color: #2563eb;
 }
 
 
@@ -62,7 +62,7 @@ nav ul li a.actiu {
 
 .barra-rellotge {
     background-color: #ffffff;
-    border-bottom: 2px solid #e0e4e1;
+    border-bottom: 2px solid #dce3ec;
     padding: 12px 7%;
     display: flex;
     justify-content: center;
@@ -73,13 +73,13 @@ nav ul li a.actiu {
 
 .titol-rellotge {
     font-weight: bold;
-    color: #172b24;
+    color: #0f2537;
     font-size: 15px;
     text-transform: uppercase;
 }
 
 .estat-actiu {
-    background-color: #3b704f;
+    background-color: #2563eb;
     color: #ffffff;
     font-size: 12px;
     font-weight: bold;
@@ -92,16 +92,16 @@ nav ul li a.actiu {
     font-family: "Courier New", Courier, monospace;
     font-size: 22px;
     font-weight: bold;
-    color: #172b24;
-    background-color: #f4f5f4;
+    color: #0f2537;
+    background-color: #f4f6f9;
     padding: 4px 12px;
     border-radius: 5px;
-    border: 1px solid #cccccc;
+    border: 1px solid #cbd5e1;
 }
 
 .llegenda-rellotge {
     font-size: 13px;
-    color: #666666;
+    color: #64748b;
 }
 
 
@@ -112,7 +112,7 @@ nav ul li a.actiu {
     width: 100%;
     height: 550px;
     overflow: hidden;
-    background-color: #172b24;
+    background-color: #0f2537;
 }
 
 .portada img {
@@ -171,7 +171,7 @@ nav ul li a.actiu {
 }
 
 .titol-seccio h2 {
-    color: #172b24;
+    color: #0f2537;
     font-size: 32px;
     letter-spacing: 1px;
 }
@@ -208,7 +208,7 @@ nav ul li a.actiu {
 .escudo-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-    border-color: #3b704f;
+    border-color: #2563eb;
 }
 
 .escudo-card img {
@@ -220,50 +220,50 @@ nav ul li a.actiu {
 
 .escudo-card h3 {
     font-size: 18px;
-    color: #172b24;
+    color: #0f2537;
 }
 
 
-/* Panell inferior de l'equip seleccionat */
+/* Panell inferior de l'equip seleccionat (ampliat) */
 
 .detalle-equipo {
     display: none;
-    max-width: 700px;
-    margin: 0 auto 50px auto;
+    max-width: 1000px;
+    margin: 20px auto 60px auto;
     background-color: #ffffff;
-    border-radius: 10px;
-    padding: 35px;
+    border-radius: 12px;
+    padding: 45px;
     text-align: center;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-    border-top: 6px solid #172b24;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border-top: 8px solid #0f2537;
 }
 
 .etiqueta-seleccionat {
-    font-size: 15px;
-    color: #3b704f;
-    margin-bottom: 20px;
+    font-size: 17px;
+    color: #2563eb;
+    margin-bottom: 25px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .detalle-equipo img {
     width: 100%;
-    max-width: 320px;
+    max-width: 680px;
     height: auto;
     object-fit: contain;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 25px auto;
     display: block;
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
 .detalle-equipo h3 {
-    font-size: 28px;
-    color: #172b24;
-    margin-bottom: 12px;
+    font-size: 36px;
+    color: #0f2537;
+    margin-bottom: 15px;
 }
 
 .detalle-equipo p#descripcion-grande {
-    font-size: 17px;
+    font-size: 20px;
     color: #444444;
     line-height: 1.6;
 }
@@ -305,7 +305,7 @@ nav ul li a.actiu {
 
 .llegenda-card h3 {
     font-size: 20px;
-    color: #172b24;
+    color: #0f2537;
     margin-bottom: 10px;
     transition: color 0.3s ease;
 }
@@ -327,11 +327,11 @@ nav ul li a.actiu {
     padding: 35px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-top: 5px solid #172b24;
+    border-top: 5px solid #0f2537;
 }
 
 .formulari-seguretat h2 {
-    color: #172b24;
+    color: #0f2537;
     font-size: 24px;
     margin-bottom: 8px;
     text-align: center;
@@ -352,14 +352,14 @@ nav ul li a.actiu {
 
 .camp-formulari label {
     font-weight: bold;
-    color: #172b24;
+    color: #0f2537;
     margin-bottom: 6px;
     font-size: 15px;
 }
 
 .camp-formulari input {
     padding: 12px;
-    border: 1px solid #cccccc;
+    border: 1px solid #cbd5e1;
     border-radius: 5px;
     font-size: 16px;
     transition: border-color 0.3s ease;
@@ -367,12 +367,12 @@ nav ul li a.actiu {
 
 .camp-formulari input:focus {
     outline: none;
-    border-color: #3b704f;
+    border-color: #2563eb;
 }
 
 .boto-comprovar {
     width: 100%;
-    background-color: #172b24;
+    background-color: #0f2537;
     color: #ffffff;
     font-size: 16px;
     font-weight: bold;
@@ -385,14 +385,14 @@ nav ul li a.actiu {
 }
 
 .boto-comprovar:hover {
-    background-color: #3b704f;
+    background-color: #2563eb;
 }
 
 
 /* Peu de pàgina */
 
 footer {
-    background-color: #172b24;
+    background-color: #0f2537;
     height: 60px;
     margin-top: 50px;
 }
