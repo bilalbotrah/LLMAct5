@@ -1,4 +1,3 @@
-/* Funció per a la galeria interactiva d'equips */
 function seleccionarEquip(nom, rutaImatge, descripcio) {
     const contenidorDetall = document.getElementById("detalle-equipo");
     const textSuperior = document.getElementById("nombre-top");
