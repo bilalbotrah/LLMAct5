@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Bilal Botrah">
+    <meta name="description" content="Web dedicada al món del futbol, els seus equips i les seves llegendes.">
+    <meta name="keywords" content="futbol, equips, llegendes, estadis, esports">
+
+    <title>El món del futbol - Inici</title>
+
+    <link rel="stylesheet" href="css/estils.css">
+</head>
+
+<body>
+
+    <!-- Capçalera -->
+    <header>
+
+        <div class="logo">
+            <h1>EL MÓN DEL FUTBOL</h1>
+        </div>
+
+        <!-- Menú de navegació -->
+        <nav>
+            <ul>
+                <li><a href="index.html" class="actiu">Inici</a></li>
+                <li><a href="equips.html">Equips</a></li>
+                <li><a href="llegendes.html">Llegendes</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Rellotge comptador de temps a la part superior -->
+    <section class="barra-rellotge">
+        <span class="titol-rellotge">Temps a la pàgina</span>
+        <span class="estat-actiu">ACTIU</span>
+        <span id="comptador-temps" class="digits-rellotge">00:00:00</span>
+        <span class="llegenda-rellotge">Hores : minuts : segons</span>
+    </section>
+
+    <!-- Contingut principal -->
+    <main>
+
+        <!-- Imatge principal de l'estadi -->
+        <section class="portada">
+
+            <img src="img/estadi.png" alt="Estadi de futbol il·luminat de nit">
+
+            <div class="text-portada">
+                <h2>LA PASSIÓ PEL FUTBOL</h2>
+
+                <p>
+                    Descobreix el món del futbol, els equips més importants
+                    i els jugadors que han fet història.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- Presentació -->
+        <section class="presentacio-completa">
+            <img src="img/estadi.png" alt="Estadi de futbol">
+        </section>
+
+    </main>
+
+    <!-- Peu de pàgina -->
+    <footer></footer>
+
+    <!-- Codi JavaScript dins del BODY per al comptador de temps -->
+    <script>
+        let segonsTotals = 0;
+
+        function actualitzarRellotge() {
+            segonsTotals++;
+
+            const hores = Math.floor(segonsTotals / 3600);
+            const minuts = Math.floor((segonsTotals % 3600) / 60);
+            const segons = segonsTotals % 60;
+
+            const horesText = String(hores).padStart(2, "0");
+            const minutsText = String(minuts).padStart(2, "0");
+            const segonsText = String(segons).padStart(2, "0");
+
+            document.getElementById("comptador-temps").textContent =
+                horesText + ":" + minutsText + ":" + segonsText;
+        }
+
+        setInterval(actualitzarRellotge, 1000);
+    </script>
+
+</body>
+
+</html>

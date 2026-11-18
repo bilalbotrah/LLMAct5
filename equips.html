@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bilal Botrah">
+    <meta name="description" content="Galeria interactiva dels escuts dels equips de futbol més importants del món.">
+    <meta name="keywords" content="futbol, equips, escuts, bayern, barcelona, madrid, milan, psg, united">
+    <title>El món del futbol - Equips</title>
+    <link rel="stylesheet" href="css/estils.css">
+</head>
+
+<body>
+
+    <!-- Capçalera -->
+    <header>
+        <div class="logo">
+            <h1>EL MÓN DEL FUTBOL</h1>
+        </div>
+
+        <!-- Menú de navegació -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Inici</a></li>
+                <li><a href="equips.html" class="actiu">Equips</a></li>
+                <li><a href="llegendes.html">Llegendes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contingut principal -->
+    <main>
+
+        <section class="titol-seccio">
+            <h2>ELS EQUIPS HISTÒRICS</h2>
+            <p>Selecciona un equip fent clic sobre el seu escut per veure'n els detalls.</p>
+        </section>
+
+        <!-- Graella interactiva amb els 6 escuts -->
+        <section class="escudos-container">
+            
+            <!-- 1. Bayern Munich -->
+            <article class="escudo-card" onclick="seleccionarEquip('FC Bayern Munich', 'img/bayern.jpg', 'El gegant del futbol alemany i múltiples vegades campió de la Champions League.')">
+                <img src="img/bayern.jpg" alt="Escut del FC Bayern Munich">
+                <h3>FC Bayern Munich</h3>
+            </article>
+
+            <!-- 2. FC Barcelona -->
+            <article class="escudo-card" onclick="seleccionarEquip('FC Barcelona', 'img/fcbarcelona.jpg', 'Més que un club, referent històric pel seu estil de joc i el seu palmarès europeu.')">
+                <img src="img/fcbarcelona.jpg" alt="Escut del FC Barcelona">
+                <h3>FC Barcelona</h3>
+            </article>
+
+            <!-- 3. Real Madrid -->
+            <article class="escudo-card" onclick="seleccionarEquip('Real Madrid C.F.', 'img/madrid.jpg', 'Un dels clubs més llorejats de la història del futbol europeu i mundial.')">
+                <img src="img/madrid.jpg" alt="Escut del Real Madrid C.F.">
+                <h3>Real Madrid C.F.</h3>
+            </article>
+
+            <!-- 4. AC Milan -->
+            <article class="escudo-card" onclick="seleccionarEquip('A.C. Milan', 'img/milan.jpg', 'Un dels clubs italians amb més prestigi internacional i set Copes d\'Europa.')">
+                <img src="img/milan.jpg" alt="Escut de l'A.C. Milan">
+                <h3>A.C. Milan</h3>
+            </article>
+
+            <!-- 5. PSG -->
+            <article class="escudo-card" onclick="seleccionarEquip('Paris Saint-Germain', 'img/psg.jpg', 'El gran dominador del futbol francès modern amb grans estrelles internacionals.')">
+                <img src="img/psg.jpg" alt="Escut del Paris Saint-Germain">
+                <h3>Paris Saint-Germain</h3>
+            </article>
+
+            <!-- 6. Manchester United -->
+            <article class="escudo-card" onclick="seleccionarEquip('Manchester United F.C.', 'img/united.jpg', 'Els Red Devils d\'Old Trafford, històric club anglès amb una afició global.')">
+                <img src="img/united.jpg" alt="Escut del Manchester United F.C.">
+                <h3>Manchester United F.C.</h3>
+            </article>
+
+        </section>
+
+        <!-- Contenidor on apareixerà l'equip seleccionat en gran -->
+        <section id="detalle-equipo" class="detalle-equipo">
+            <p class="etiqueta-seleccionat">Equip seleccionat: <strong id="nombre-top">Cap</strong></p>
+            <img id="imagen-grande" src="" alt="Escut ampliat">
+            <h3 id="titulo-grande"></h3>
+            <p id="descripcion-grande"></p>
+        </section>
+
+    </main>
+
+    <!-- Peu de pàgina -->
+    <footer></footer>
+
+    <!-- Enllaç a l'arxiu JavaScript dins la carpeta components -->
+    <script src="components/components.js"></script>
+
+</body>
+
+</html>

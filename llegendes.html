@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Bilal Botrah">
+    <meta name="description" content="Pàgina dedicada a les grans llegendes de la història del futbol.">
+    <meta name="keywords" content="futbol, llegendes, messi, ronaldo, neymar, xavi, cruyff, maradona">
+    <title>El món del futbol - Llegendes</title>
+    <link rel="stylesheet" href="css/estils.css">
+
+    <!-- Codi JavaScript dins del HEAD per al Requisit 2 -->
+    <script>
+        function mostrarLlegenda(targeta) {
+            targeta.style.backgroundColor = "#172b24";
+
+            const titol = targeta.querySelector("h3");
+            titol.style.color = "#ffffff";
+
+            const paragraf = targeta.querySelector(".info-oculta");
+            paragraf.style.display = "block";
+            paragraf.style.color = "#e0e0e0";
+        }
+
+        function amagarLlegenda(targeta) {
+            targeta.style.backgroundColor = "#ffffff";
+
+            const titol = targeta.querySelector("h3");
+            titol.style.color = "#172b24";
+
+            const paragraf = targeta.querySelector(".info-oculta");
+            paragraf.style.display = "none";
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Capçalera -->
+    <header>
+        <div class="logo">
+            <h1>EL MÓN DEL FUTBOL</h1>
+        </div>
+
+        <!-- Menú de navegació -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Inici</a></li>
+                <li><a href="equips.html">Equips</a></li>
+                <li><a href="llegendes.html" class="actiu">Llegendes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contingut principal -->
+    <main>
+
+        <section class="titol-seccio">
+            <h2>LES LLEGENDES DEL FUTBOL</h2>
+            <p>Passa el cursor per sobre de cada jugador per descobrir la seva història i el seu llegat.</p>
+        </section>
+
+        <!-- Graella interactiva amb els 6 jugadors -->
+        <section class="llegendes-container">
+
+            <!-- 1. Lionel Messi -->
+            <article class="llegenda-card" onmouseover="mostrarLlegenda(this)" onmouseout="amagarLlegenda(this)">
+                <img src="img/messi.avif" alt="Lionel Messi">
+                <h3>Lionel Messi</h3>
+                <p class="info-oculta">
+                    Considerat per molts el millor futbolista de tots els temps. Guanyador de 8 Balons d'Or, 
+                    campió del món amb l'Argentina i màxim golejador històric del FC Barcelona.
+                </p>
+            </article>
+
+            <!-- 2. Cristiano Ronaldo -->
+            <article class="llegenda-card" onmouseover="mostrarLlegenda(this)" onmouseout="amagarLlegenda(this)">
+                <img src="img/ronaldo.jpg" alt="Cristiano Ronaldo">
+                <h3>Cristiano Ronaldo</h3>
+                <p class="info-oculta">
+                    Un depredador de l'àrea amb una capacitat física inigualable. Màxim golejador històric 
+                    de la Champions League, guanyador de 5 Balons d'Or i llegenda del Real Madrid.
+                </p>
+            </article>
+
+            <!-- 3. Neymar Jr -->
+            <article class="llegenda-card" onmouseover="mostrarLlegenda(this)" onmouseout="amagarLlegenda(this)">
+                <img src="img/neymar.webp" alt="Neymar Jr">
+                <h3>Neymar Jr</h3>
+                <p class="info-oculta">
+                    Màgia pura i desequilibri brasiler. Campió de la Copa Libertadores amb el Santos, 
+                    de la Champions amb el Barça i màxim golejador històric de la selecció del Brasil.
+                </p>
+            </article>
+
+            <!-- 4. Xavi Hernández -->
+            <article class="llegenda-card" onmouseover="mostrarLlegenda(this)" onmouseout="amagarLlegenda(this)">
+                <img src="img/xavi.jpeg" alt="Xavi Hernández">
+                <h3>Xavi Hernández</h3>
+                <p class="info-oculta">
+                    El cervell del millor mig del camp de la història. Mestre del joc de posició i la passada, 
+                    peça clau en els èxits del FC Barcelona i en el Mundial i Eurocopes d'Espanya.
+                </p>
+            </article>
+
+            <!-- 5. Johan Cruyff -->
+            <article class="llegenda-card" onmouseover="mostrarLlegenda(this)" onmouseout="amagarLlegenda(this)">
+                <img src="img/cruyff.jpg" alt="Johan Cruyff">
+                <h3>Johan Cruyff</h3>
+                <p class="info-oculta">
+                    El revolucionari del futbol modern. Líder del Futbol Total amb l'Ajax i els Països Baixos, 
+                    va canviar per sempre la mentalitat i l'estil del FC Barcelona com a jugador i entrenador.
+                </p>
+            </article>
+
+            <!-- 6. Diego Armando Maradona -->
+            <article class="llegenda-card" onmouseover="mostrarLlegenda(this)" onmouseout="amagarLlegenda(this)">
+                <img src="img/maradona.webp" alt="Diego Armando Maradona">
+                <h3>Diego Maradona</h3>
+                <p class="info-oculta">
+                    Icona eterna del futbol mundial. Capaç de guanyar gairebé sol el Mundial de Mèxic 1986 
+                    i de portar el Nàpols al cim del futbol italià i europeu amb la seva cama esquerra.
+                </p>
+            </article>
+
+        </section>
+
+        <!-- Formulari de comprovació de contrasenya -->
+        <section class="formulari-seguretat">
+            <h2>Formulari de seguretat</h2>
+            <p>Actualitza la teva contrasenya d'accés a la zona de socis.</p>
+
+            <form onsubmit="return false;">
+                <div class="camp-formulari">
+                    <label for="pass1">Introdueix la contrasenya</label>
+                    <input type="password" id="pass1" placeholder="Mínim 8 caràcters">
+                </div>
+
+                <div class="camp-formulari">
+                    <label for="pass2">Repeteix la contrasenya</label>
+                    <input type="password" id="pass2" placeholder="Repeteix la contrasenya">
+                </div>
+
+                <button type="button" class="boto-comprovar" onclick="comprovarContrasenya()">
+                    Comprovar contrasenya
+                </button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Peu de pàgina -->
+    <footer></footer>
+
+    <!-- Codi JavaScript dins del BODY per al Requisit 4 -->
+    <script>
+        function comprovarContrasenya() {
+            const pass1 = document.getElementById("pass1").value;
+            const pass2 = document.getElementById("pass2").value;
+
+            if (pass1 === "" || pass2 === "") {
+                alert("Error: Has d'omplir els dos camps de contrasenya.");
+                return;
+            }
+
+            if (pass1.length < 8) {
+                alert("Error: La contrasenya ha de tenir un mínim de 8 caràcters.");
+                return;
+            }
+
+            if (pass1 !== pass2) {
+                alert("Error: Les dues contrasenyes no coincideixen.");
+                return;
+            }
+
+            alert("S'ha canviat correctament la contrasenya");
+        }
+    </script>
+
+</body>
+
+</html>

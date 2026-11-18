@@ -1,0 +1,450 @@
+/* Estils generals */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f5f4;
+    color: #222222;
+}
+
+
+/* Capçalera */
+
+header {
+    background-color: #172b24;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+}
+
+.logo h1 {
+    font-size: 27px;
+    letter-spacing: 2px;
+}
+
+
+/* Menú de navegació */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #3b704f;
+    color: white;
+}
+
+nav ul li a.actiu {
+    background-color: #3b704f;
+}
+
+
+/* Barra del rellotge comptador (Inici) */
+
+.barra-rellotge {
+    background-color: #ffffff;
+    border-bottom: 2px solid #e0e4e1;
+    padding: 12px 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.titol-rellotge {
+    font-weight: bold;
+    color: #172b24;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.estat-actiu {
+    background-color: #3b704f;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 12px;
+    letter-spacing: 1px;
+}
+
+.digits-rellotge {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 22px;
+    font-weight: bold;
+    color: #172b24;
+    background-color: #f4f5f4;
+    padding: 4px 12px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+}
+
+.llegenda-rellotge {
+    font-size: 13px;
+    color: #666666;
+}
+
+
+/* Portada i imatge de l'estadi (Inici) */
+
+.portada {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    background-color: #172b24;
+}
+
+.portada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(55%);
+}
+
+
+/* Text sobre la imatge */
+
+.text-portada {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 650px;
+}
+
+.text-portada h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.text-portada p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+
+/* Imatge a amplada completa (Inici) */
+
+.presentacio-completa {
+    width: 100%;
+    margin-top: 50px;
+    line-height: 0;
+}
+
+.presentacio-completa img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* Títols de secció (Equips i Llegendes) */
+
+.titol-seccio {
+    text-align: center;
+    margin: 40px 20px 30px 20px;
+}
+
+.titol-seccio h2 {
+    color: #172b24;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.titol-seccio p {
+    color: #555555;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+/* Galeria interactiva d'equips */
+
+.escudos-container {
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 0 20px;
+}
+
+.escudo-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    border: 2px solid transparent;
+}
+
+.escudo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    border-color: #3b704f;
+}
+
+.escudo-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.escudo-card h3 {
+    font-size: 18px;
+    color: #172b24;
+}
+
+
+/* Panell inferior de l'equip seleccionat */
+
+.detalle-equipo {
+    display: none;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    border-top: 6px solid #172b24;
+}
+
+.etiqueta-seleccionat {
+    font-size: 15px;
+    color: #3b704f;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.detalle-equipo img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto 20px auto;
+    display: block;
+    border-radius: 6px;
+}
+
+.detalle-equipo h3 {
+    font-size: 28px;
+    color: #172b24;
+    margin-bottom: 12px;
+}
+
+.detalle-equipo p#descripcion-grande {
+    font-size: 17px;
+    color: #444444;
+    line-height: 1.6;
+}
+
+
+/* Galeria interactiva de llegendes */
+
+.llegendes-container {
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 0 20px;
+}
+
+.llegenda-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.llegenda-card:hover {
+    transform: translateY(-5px);
+}
+
+.llegenda-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.llegenda-card h3 {
+    font-size: 20px;
+    color: #172b24;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.info-oculta {
+    display: none;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+
+/* Formulari de seguretat (Llegendes) */
+
+.formulari-seguretat {
+    max-width: 500px;
+    margin: 20px auto 50px auto;
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #172b24;
+}
+
+.formulari-seguretat h2 {
+    color: #172b24;
+    font-size: 24px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.formulari-seguretat p {
+    color: #555555;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.camp-formulari {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.camp-formulari label {
+    font-weight: bold;
+    color: #172b24;
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+.camp-formulari input {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.camp-formulari input:focus {
+    outline: none;
+    border-color: #3b704f;
+}
+
+.boto-comprovar {
+    width: 100%;
+    background-color: #172b24;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.boto-comprovar:hover {
+    background-color: #3b704f;
+}
+
+
+/* Peu de pàgina */
+
+footer {
+    background-color: #172b24;
+    height: 60px;
+    margin-top: 50px;
+}
+
+
+/* Adaptació a mòbils */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .logo h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    nav ul li a {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .portada {
+        height: 400px;
+    }
+
+    .text-portada {
+        left: 6%;
+        right: 6%;
+    }
+
+    .text-portada h2 {
+        font-size: 32px;
+    }
+
+    .text-portada p {
+        font-size: 16px;
+    }
+
+    .detalle-equipo,
+    .formulari-seguretat {
+        margin: 0 15px 40px 15px;
+        padding: 25px;
+    }
+
+}
